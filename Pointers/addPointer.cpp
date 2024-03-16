@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-arrAdd(int *arr,int *ptr){
+int arrAdd(int *arr,int *ptr){
     for (int i = 0; i < *ptr; i++)
     {
         arr[i] += 5;

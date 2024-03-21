@@ -75,14 +75,12 @@ BSTNode* deleteBST(BSTNode* root, int toDel) {
             free(root);
             return temp;
         } else {
-            // Node to be deleted has two children
-            // Find the inorder successor (or predecessor)
-            BSTNode* successor = root->Right;
-            while (successor->Left != nullptr) {
-                successor = successor->Left;
+            BSTNode* succ = root->Right;
+            while (succ->Left != nullptr) {
+                succ = succ->Left;
             }
-            root->data = successor->data;
-            root->Right = deleteBST(root->Right, successor->data);
+            root->data = succ->data;
+            root->Right = deleteBST(root->Right, succ->data);
         }
     }
 
@@ -126,7 +124,7 @@ int findMin(BSTNode* node) {
 
 int findMax(BSTNode* node) {
     if (node == nullptr)
-        return -1; // y
+        return -1;
 
     while (node->Right != nullptr)
         node = node->Right;

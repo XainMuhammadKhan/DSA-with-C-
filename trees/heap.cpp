@@ -47,7 +47,7 @@ void buildMinHeap(int arr[], int size) {
     }
 }
 
-void insert(int arr[], int& size) {
+void insert(int arr[], int size) {
     if (size == 0) {
         cout << "Enter Value: ";
         cin >> arr[0];

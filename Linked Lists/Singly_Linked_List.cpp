@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cstdlib>
 using namespace std;
+
 struct Record {
     int rollNo;
     float CGPA;

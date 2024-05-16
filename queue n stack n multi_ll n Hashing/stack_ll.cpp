@@ -55,7 +55,7 @@ void Pop(){
 
 if(top == NULL){
 
-cout << "List is empty" << endl;
+cout << "stack is empty" << endl;
 return;
 
 
